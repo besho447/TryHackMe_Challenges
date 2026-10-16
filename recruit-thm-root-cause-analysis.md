@@ -1,4 +1,4 @@
-# Recruit (TryHackMe) — Root Cause & Mitigation Analysis
+# Recruit (TryHackMe)
 
 > Offensive/Defensive breakdown of the vulnerabilities chained in the **Recruit** room (TryHackMe).
 > Goal: not just "how it was exploited" but **why the code allowed it** and **how to fix it properly**.
