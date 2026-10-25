@@ -71,7 +71,8 @@ logs/
 
 After that, we need to visit the logs directory, but remember the dev hint above, so we go to `hmr_logs/`.
 
-![[Pasted image 20261016183546.png]]
+<img width="419" height="203" alt="image" src="https://github.com/user-attachments/assets/b5cee983-04e8-4e6f-8d22-385a769ed2a9" />
+
 
 In `error.logs`, I found an email address that tried to log in: `tester@hammer.thm`.
 
@@ -79,7 +80,8 @@ In `error.logs`, I found an email address that tried to log in: `tester@hammer.t
 
 When I entered `tester@hammer.thm` in the email input, it redirected me to an OTP page that asks for a 4-digit OTP within 160 seconds.
 
-![[Pasted image 20261016202417.png]]
+<img width="703" height="465" alt="image" src="https://github.com/user-attachments/assets/5cac4a8b-47f1-48d4-b5ab-69b7bf81b523" />
+
 
 After some research, I realised that **X-Forwarded-For** would work: when I add it to the request, the rate limit returned in the response is reset.
 
@@ -180,11 +182,13 @@ run_bruteforce()
 
 After logging in, I got the flag.
 
-![[Pasted image 20261016202810.png]]
+<img width="720" height="387" alt="image" src="https://github.com/user-attachments/assets/092d8a9b-003a-48ed-854a-91009c08744f" />
+
 
 After some playing around, I figured out that only the `ls` command is allowed; anything else is blocked.
 
-![[Pasted image 20261016202953.png]]
+<img width="584" height="821" alt="image" src="https://github.com/user-attachments/assets/b072cc6e-f523-45b0-a438-ed33a80a127a" />
+
 
 All of this was captured in Burp history, so when I opened Burp I found a JWT. I tried all the common JWT attacks, such as the `none` algorithm and altering the payload before resending, but nothing worked. So I went back to the page and started thinking about the `188ade1.key` file. I opened it in a new tab and downloaded it. It contains this value:
 
